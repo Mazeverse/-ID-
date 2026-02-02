@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>ニュースキン スポンサーID – 登録用 紹介コード（コピー可）</title>
+  <meta name="description" content="ニュースキンの登録時に必要なスポンサーID（紹介コード）を探していますか？このスポンサーIDをコピーして、スムーズに登録できます。" />
+
+  <link rel="canonical" href="https://nu-skin-sponsor-id-referral-code-fo.vercel.app/" />
+  <meta property="og:title" content="ニュースキン スポンサーID – 登録用 紹介コード（コピー可）" />
+  <meta property="og:description" content="登録時に入力するニュースキンのスポンサーID（紹介コード）。ワンクリックでコピーできます。" />
+  <meta property="og:url" content="https://nu-skin-sponsor-id-referral-code-fo.vercel.app/" />
+  <meta property="og:type" content="website" />
+
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+      background: #f7f9fc;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      max-width: 560px;
+      margin: 80px auto;
+      background: #ffffff;
+      padding: 32px;
+      border-radius: 14px;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+      text-align: center;
+    }
+    h1 { font-size: 24px; margin-bottom: 10px; }
+    p { color: #555; line-height: 1.7; font-size: 15px; margin: 10px 0; }
+    .code-box {
+      margin: 22px 0 12px;
+      padding: 16px;
+      border: 2px dashed #d0d7e2;
+      border-radius: 10px;
+      font-size: 22px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      background: #f9fbff;
+    }
+    button {
+      margin-top: 10px;
+      padding: 12px 18px;
+      font-size: 15px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      background: #2d6cdf;
+      color: #fff;
+    }
+    button:hover { filter: brightness(0.95); }
+    .footer {
+      margin-top: 22px;
+      font-size: 12px;
+      color: #888;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>ニュースキン スポンサーID</h1>
+
+    <p>
+      新規登録の際、<strong>スポンサーID</strong>（紹介コード）の入力が求められる場合があります。
+    </p>
+
+    <p>以下のスポンサーIDをご利用ください（コピーできます）:</p>
+
+    <div class="code-box" id="sponsorCode">KR01315058</div>
+
+    <button onclick="copyCode()">スポンサーIDをコピー</button>
+
+    <div class="footer">
+      ※本ページは情報提供を目的としています。<br />
+      国や地域によって登録ルールが異なる場合があります。
+    </div>
+  </div>
+
+  <script>
+    function copyCode() {
+      const code = document.getElementById("sponsorCode").innerText.trim();
+      if (!navigator.clipboard) {
+        const textarea = document.createElement("textarea");
+        textarea.value = code;
+        document.body.appendChild(textarea);
+        textarea.select();
+        document.execCommand("copy");
+        document.body.removeChild(textarea);
+        alert("コピーしました！");
+        return;
+      }
+      navigator.clipboard.writeText(code).then(() => {
+        alert("コピーしました！");
+      }).catch(() => {
+        alert("コピーに失敗しました。手動でコピーしてください: " + code);
+      });
+    }
+  </script>
+
+</body>
+</html>
